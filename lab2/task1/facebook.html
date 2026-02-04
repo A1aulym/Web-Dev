@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Facebook — вход</title>
+  <link rel="stylesheet" href="style1.css" />
+</head>
+
+<body>
+  <main class="page">
+    <section class="layout">
+
+      <!-- LEFT -->
+      <div class="left">
+        <h1 class="fb-logo" aria-label="Facebook">facebook</h1>
+        <p class="tagline">
+          Facebook помогает вам всегда<br>
+          оставаться на связи и общаться со<br>
+          своими знакомыми.
+        </p>
+      </div>
+
+      <!-- RIGHT -->
+      <div class="right">
+        <div class="card">
+          <form class="form" action="#" method="post">
+            <label class="sr-only" for="login">Электронный адрес или номер телефона</label>
+            <input
+              id="login"
+              name="login"
+              type="text"
+              placeholder="Электронный адрес или номер телефона"
+              autocomplete="username"
+              required
+            />
+
+            <label class="sr-only" for="password">Пароль</label>
+            <input
+              id="password"
+              name="password"
+              type="password"
+              placeholder="Пароль"
+              autocomplete="current-password"
+              required
+            />
+
+            <button class="btn btn-primary" type="submit">Вход</button>
+
+            <a class="link" href="#">Забыли пароль?</a>
+
+            <div class="divider" role="separator" aria-hidden="true"></div>
+
+            <button class="btn btn-green" type="button">Создать новый аккаунт</button>
+          </form>
+        </div>
+
+        <p class="below">
+          <a class="below-link" href="#">Создать Страницу</a>
+          знаменитости, музыкальной группы или<br>
+          компании.
+        </p>
+      </div>
+
+    </section>
+  </main>
+</body>
+</html>

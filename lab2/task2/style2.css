@@ -1,0 +1,252 @@
+:root{
+  --bg: #ffffff;
+  --text: #111;
+  --muted: #6b7280;
+  --border: #e5e7eb;
+  --blue: #8fb2ea;     /* светло-голубая кнопка как на скрине */
+  --outline: #cfe0ff;  /* обводка кнопок */
+}
+
+*{ box-sizing: border-box; }
+
+body{
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.page{
+  min-height: calc(100vh - 120px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px 16px;
+}
+
+/* main 2-column layout */
+.container{
+  width: min(1100px, 100%);
+  display: grid;
+  grid-template-columns: 1fr 1px 420px;
+  align-items: center;
+  gap: 28px;
+}
+
+/* vertical line */
+.divider{
+  width: 1px;
+  height: 520px;
+  background: var(--border);
+}
+
+/* LEFT */
+.promo{
+  min-height: 520px;
+  position: relative;
+}
+
+.promo-header{
+  position: absolute;
+  top: 10px;
+  left: 0;
+}
+
+.ig-icon{
+  width: 34px;
+  
+}
+
+.ig-face{
+  width: 10px;
+  align-items: center;
+  justify-content: center;
+  margin-right:8px;
+
+}
+.promo-content{
+  height: 520px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  text-align: center;
+}
+
+.promo-title{
+  margin: 0;
+  font-size: 26px;
+  line-height: 34px;
+  font-weight: 600;
+}
+
+.pink{ color: #ff3b8d; }
+.magenta{ color: #d300c5; }
+
+.promo-image{
+  width: min(420px, 85%);
+  height: auto;
+}
+
+/* RIGHT */
+.login{
+  display: flex;
+  justify-content: center;
+}
+
+.login-card{
+  width: 360px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 18px 18px 16px;
+  background: #fff;
+}
+
+.login-title{
+  margin: 0 0 14px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #374151;
+}
+
+.form{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input{
+  height: 36px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0 12px;
+  font-size: 12px;
+  color: #111;
+  outline: none;
+}
+
+input:focus{
+  border-color: #bcd0ff;
+  box-shadow: 0 0 0 3px rgba(143,178,234,0.25);
+}
+
+.btn{
+  height: 34px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.btn-primary{
+  background: var(--blue);
+  color: #fff;
+}
+
+.small-link{
+  text-decoration: none;
+  color: #111;
+  font-size: 11px;
+  text-align: center;
+  margin-top: 2px;
+}
+
+.small-link:hover{ text-decoration: underline; }
+
+.or-row{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 4px 0;
+}
+
+.or-line{
+  height: 1px;
+  background: var(--border);
+  flex: 1;
+}
+
+.or-text{
+  font-size: 11px;
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.btn-outline{
+  background: #fff;
+  border-color: var(--outline);
+  color: #2563eb;
+}
+
+.meta-row{
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 6px;
+  color: #2563eb;
+  font-size: 11px;
+}
+
+.meta-dot{
+  width: 10px;
+  height: 10px;
+  border: 2px solid #2563eb;
+  border-radius: 50%;
+}
+
+/* accessibility: labels exist but hidden visually */
+.sr-only{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+
+/* FOOTER */
+.footer{
+  border-top: 1px solid var(--border);
+  padding: 14px 16px 20px;
+}
+
+.footer-links{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 14px;
+  justify-content: center;
+  font-size: 11px;
+}
+
+.footer-links a{
+  color: #6b7280;
+  text-decoration: none;
+}
+
+.footer-links a:hover{
+  text-decoration: underline;
+}
+
+.footer-bottom{
+  margin-top: 10px;
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  color: #6b7280;
+  font-size: 11px;
+}
+
+/* responsive */
+@media (max-width: 950px){
+  .container{
+    grid-template-columns: 1fr;
+  }
+  .divider{ display: none; }
+  .promo{ display: none; } /* как часто у инсты на мобилке */
+  .login-card{ width: min(380px, 100%); }
+}
