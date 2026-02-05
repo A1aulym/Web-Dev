@@ -1,23 +1,14 @@
-:root{
-  --bg: #ffffff;
-  --text: #111;
-  --muted: #6b7280;
-  --border: #e5e7eb;
-  --blue: #8fb2ea;     /* светло-голубая кнопка как на скрине */
-  --outline: #cfe0ff;  /* обводка кнопок */
-}
-
 *{ box-sizing: border-box; }
 
 body{
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  background: var(--bg);
-  color: var(--text);
+  background: rgb(255,255,255);
+  color: rgb(17,17,17);
 }
 
 .page{
-  min-height: calc(100vh - 120px);
+  /*min-height: calc(100vh - 120px);*/
   display: flex;
   justify-content: center;
   align-items: center;
@@ -37,7 +28,7 @@ body{
 .divider{
   width: 1px;
   height: 520px;
-  background: var(--border);
+  background: rgb(229,231,235);
 }
 
 /* LEFT */
@@ -52,18 +43,13 @@ body{
   left: 0;
 }
 
-.ig-icon{
-  width: 34px;
-  
-}
+.ig-icon{ width: 34px; }
 
 .ig-face{
   width: 10px;
-  align-items: center;
-  justify-content: center;
-  margin-right:8px;
-
+  margin-right: 8px;
 }
+
 .promo-content{
   height: 520px;
   display: flex;
@@ -81,8 +67,8 @@ body{
   font-weight: 600;
 }
 
-.pink{ color: #ff3b8d; }
-.magenta{ color: #d300c5; }
+.pink{ color: rgb(255,59,141); }
+.magenta{ color: rgb(211,0,197); }
 
 .promo-image{
   width: min(420px, 85%);
@@ -97,17 +83,15 @@ body{
 
 .login-card{
   width: 360px;
-  border: 1px solid var(--border);
-  border-radius: 10px;
   padding: 18px 18px 16px;
-  background: #fff;
+  background: rgb(255,255,255);
 }
 
 .login-title{
   margin: 0 0 14px;
   font-size: 14px;
   font-weight: 700;
-  color: #374151;
+  color: rgb(55,65,81);
 }
 
 .form{
@@ -118,16 +102,16 @@ body{
 
 input{
   height: 36px;
-  border: 1px solid var(--border);
+  border: 1px solid rgb(229,231,235);
   border-radius: 10px;
   padding: 0 12px;
   font-size: 12px;
-  color: #111;
+  color: rgb(17,17,17);
   outline: none;
 }
 
 input:focus{
-  border-color: #bcd0ff;
+  border-color: rgb(188,208,255);
   box-shadow: 0 0 0 3px rgba(143,178,234,0.25);
 }
 
@@ -141,19 +125,21 @@ input:focus{
 }
 
 .btn-primary{
-  background: var(--blue);
-  color: #fff;
+  background: rgb(143,178,234);
+  color: rgb(255,255,255);
 }
 
 .small-link{
   text-decoration: none;
-  color: #111;
+  color: rgb(17,17,17);
   font-size: 11px;
   text-align: center;
   margin-top: 2px;
 }
 
-.small-link:hover{ text-decoration: underline; }
+.small-link:hover{
+  text-decoration: underline;
+}
 
 .or-row{
   display: flex;
@@ -164,20 +150,20 @@ input:focus{
 
 .or-line{
   height: 1px;
-  background: var(--border);
+  background: rgb(229,231,235);
   flex: 1;
 }
 
 .or-text{
   font-size: 11px;
-  color: var(--muted);
+  color: rgb(107,114,128);
   font-weight: 700;
 }
 
 .btn-outline{
-  background: #fff;
-  border-color: var(--outline);
-  color: #2563eb;
+  background: rgb(255,255,255);
+  border-color: rgb(207,224,255);
+  color: rgb(37,99,235);
 }
 
 .meta-row{
@@ -186,32 +172,30 @@ input:focus{
   align-items: center;
   justify-content: center;
   margin-top: 6px;
-  color: #2563eb;
+  color: rgb(37,99,235);
   font-size: 11px;
 }
 
 .meta-dot{
   width: 10px;
   height: 10px;
-  border: 2px solid #2563eb;
+  border: 2px solid rgb(37,99,235);
   border-radius: 50%;
 }
 
-/* accessibility: labels exist but hidden visually */
+/* accessibility */
 .sr-only{
   position: absolute;
   width: 1px;
   height: 1px;
-  padding: 0;
   margin: -1px;
   overflow: hidden;
   clip: rect(0,0,0,0);
-  border: 0;
 }
 
 /* FOOTER */
 .footer{
-  border-top: 1px solid var(--border);
+  border-top: 1px solid rgb(229,231,235);
   padding: 14px 16px 20px;
 }
 
@@ -224,7 +208,7 @@ input:focus{
 }
 
 .footer-links a{
-  color: #6b7280;
+  color: rgb(107,114,128);
   text-decoration: none;
 }
 
@@ -237,7 +221,7 @@ input:focus{
   display: flex;
   gap: 14px;
   justify-content: center;
-  color: #6b7280;
+  color: rgb(107,114,128);
   font-size: 11px;
 }
 
@@ -247,6 +231,6 @@ input:focus{
     grid-template-columns: 1fr;
   }
   .divider{ display: none; }
-  .promo{ display: none; } /* как часто у инсты на мобилке */
+  .promo{ display: none; }
   .login-card{ width: min(380px, 100%); }
 }

@@ -1,30 +1,10 @@
-:root{
-  --bg: #ffffff;
-  --text: #24292f;
-  --muted: #57606a;
-  --border: #d0d7de;
-  --border2: #eaeef2;
-
-  --shadow: 0 10px 30px rgba(140,149,159,0.20);
-  --shadow2: 0 2px 10px rgba(140,149,159,0.18);
-
-  --black: #24292f;
-  --black2: #1f2328;
-
-  --blue: #0969da;
-  --blueBorder: #1f6feb;
-}
-
 *{ box-sizing: border-box; }
 
-ww{
-    width:10px;
-}
 body{
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-  background: var(--bg);
-  color: var(--text);
+  background: rgb(255, 255, 255);
+  color: rgb(36, 41, 47);
 }
 
 /* helpers */
@@ -45,8 +25,8 @@ body{
 
 /* TOPBAR */
 .topbar{
-  border-bottom: 1px solid var(--border2);
-  background: #fff;
+  border-bottom: 1px solid rgb(234, 238, 242);
+  background: rgb(255, 255, 255);
 }
 
 .topbar-inner{
@@ -66,7 +46,8 @@ body{
 .gh-icon img{
   width: 28px;
   height: 28px;
-  
+  object-fit: contain;
+  display: block;
 }
 
 .menu{
@@ -77,7 +58,7 @@ body{
 
 .menu-link{
   text-decoration: none;
-  color: var(--text);
+  color: rgb(36, 41, 47);
   font-size: 14px;
 }
 
@@ -98,17 +79,18 @@ body{
 .search input{
   width: 300px;
   height: 34px;
-  border: 1px solid var(--border);
+  border: 1px solid rgb(208, 215, 222);
   border-radius: 6px;
   padding: 0 42px 0 12px;
   font-size: 13px;
-  color: var(--text);
+  color: rgb(36, 41, 47);
   outline: none;
+  background: rgb(255, 255, 255);
 }
 
 .search input:focus{
-  border-color: var(--blueBorder);
-  box-shadow: 0 0 0 3px rgba(9,105,218,0.12);
+  border-color: rgb(31, 111, 235);
+  box-shadow: 0 0 0 3px rgb(9 105 218 / 12%);
 }
 
 .kbd{
@@ -117,19 +99,19 @@ body{
   top: 7px;
   width: 20px;
   height: 20px;
-  border: 1px solid var(--border);
+  border: 1px solid rgb(208, 215, 222);
   border-radius: 4px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   font-size: 12px;
-  color: var(--muted);
-  background: #fff;
+  color: rgb(87, 96, 106);
+  background: rgb(255, 255, 255);
 }
 
 .toplink{
   text-decoration: none;
-  color: var(--text);
+  color: rgb(36, 41, 47);
   font-size: 14px;
 }
 
@@ -157,17 +139,9 @@ body{
 .hero-desc{
   margin: 0 auto 20px;
   max-width: 75ch;
-  color: var(--muted);
+  color: rgb(87, 96, 106);
   font-size: 16px;
   line-height: 24px;
-}
-
-.hero-btn{
-  box-shadow: var(--shadow2);
-  height: 44px;
-  padding: 0 18px;
-  border-radius: 8px;
-  font-size: 14px;
 }
 
 /* BUTTONS */
@@ -185,29 +159,36 @@ body{
   white-space: nowrap;
 }
 
-.btn-small{
-  height: 32px;
-  border-radius: 8px;
-}
-
 .btn-dark{
-  background: var(--black);
-  color: #fff;
-  border-color: rgba(27,31,36,0.15);
+  background: rgb(36, 41, 47);
+  color: rgb(255, 255, 255);
+  border-color: rgb(27 31 36 / 15%);
 }
 
-.btn-dark:hover{ background: var(--black2); }
+.btn-dark:hover{ background: rgb(31, 35, 40); }
 
+.btn-outline-dark {
+  background: rgb(255, 255, 255);
+  color: rgb(36, 41, 47);
+  border: 1px solid rgb(208, 215, 222);
+}
 .btn-outline{
-  background: #fff;
-  color: var(--text);
-  border-color: var(--border);
+  background: rgb(255, 255, 255);
+  color: rgb(36, 41, 47);
+  border-color: rgb(14, 16, 17);
+
+ 
+  border: 1px solid rgb(208, 215, 222);   
+  border-radius: 8px;
+  padding: 10px 18px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
 }
 
-.btn-outline-dark{
-  background: #fff;
-  color: var(--text);
-  border-color: var(--border);
+.btn-outline-dark:hover {
+  background: rgb(246, 248, 250);
+  border-color: rgb(182, 192, 202);
 }
 
 .btn-wide{
@@ -218,8 +199,13 @@ body{
   font-weight: 700;
 }
 
-.btn-outline-dark:hover{
-  border-color: #b6c0ca;
+/* HERO button (like GitHub) */
+.hero-btn{
+  height: 44px;
+  padding: 0 18px;
+  border-radius: 8px;
+  font-size: 14px;
+  box-shadow: 0 2px 10px rgb(140 149 159 / 18%);
 }
 
 /* PLANS GRID */
@@ -227,52 +213,51 @@ body{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 22px;
-  align-items: stretch
+  align-items: stretch;
 }
 
 .plan{
-  background: #fff;
-  border: 1px solid #d8dee4;
+  background: rgb(255, 255, 255);
+  border: 1px solid rgb(216, 222, 228);
   border-radius: 16px;
-  box-shadow: var(--shadow);
+  box-shadow: 0 10px 30px rgb(140 149 159 / 20%);
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
 
+/* одинаковая "шапка высоты" у всех карточек */
+.recommended-bar{
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  letter-spacing: 0.6px;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+/* для Free и Team — невидимая шапка, чтобы уровень совпадал */
+.recommended-bar--ghost{
+  background: transparent;
+  color: transparent;
+}
+
+/* для Enterprise — синяя */
+.plan-recommended .recommended-bar{
+  background: rgb(31, 111, 235);
+  color: rgb(255, 255, 255);
 }
 
 .plan-inner{
-  padding: 28px 26px 26px;
+  padding: 28px 26px 0;
   text-align: center;
-
   display: flex;
   flex-direction: column;
-  height: 100%;         
-  
+  height: 100%;
 }
-
-.plan-body{
-  margin-top: 18px;
-  background: #f6f8fa;
-  border-top: 1px solid #e5e7eb;
-
-  /* растянуть серый блок до краёв карточки */
-  margin-left: -26px;
-  margin-right: -26px;
-  margin-bottom: -26px;
-
-  /* вернуть внутренние отступы */
-  padding: 18px 26px 26px;
-
-  /* чтобы серый блок заполнял одинаково высоту */
-  flex: 1;
-  border-bottom-left-radius: 16px;
-  border-bottom-right-radius: 16px;
-}
-/*.tag{
-  font-size: 14px;
-  color: var(--muted);
-  font-weight: 600;
-  margin-bottom: 12px;
-}*/
 
 .plan-title{
   margin: 0 0 10px;
@@ -282,7 +267,7 @@ body{
 
 .plan-subtitle{
   margin: 0 0 18px;
-  color: var(--muted);
+  color: rgb(87, 96, 106);
   font-size: 16px;
   line-height: 22px;
 }
@@ -291,26 +276,14 @@ body{
   display: inline-flex;
   align-items: center;
   justify-content: center;
-
-  width: auto;          /* ✅ важно */
-  max-width: none;      /* ✅ важно */
-  align-self: center;   /* ✅ важно (если родитель flex) */
-
   height: 30px;
   padding: 0 16px;
-
-  border: 1px solid #d0d7de;
+  border: 1px solid rgb(208, 215, 222);
   border-radius: 999px;
-
   font-size: 14px;
-  color: #57606a;
-  background: #fff;
-
+  color: rgb(87, 96, 106);
+  background: rgb(255, 255, 255);
   margin: 12px 0 10px;
-}
-
-.plan .starting{
-  width: fit-content !important;
 }
 
 /* price line */
@@ -324,7 +297,7 @@ body{
 
 .dollar{
   font-size: 22px;
-  color: var(--muted);
+  color: rgb(87, 96, 106);
   transform: translateY(-10px);
 }
 
@@ -341,36 +314,39 @@ body{
 
 .per{
   font-size: 16px;
-  color: var(--muted);
+  color: rgb(87, 96, 106);
   margin-left: 6px;
 }
 
-/* buttons row enterprise */
+/* buttons row (enterprise) */
 .btn-row{
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 14px;
+  margin-bottom: 18px;
 }
 
+/*общий серый блок снизу (у всех одинаково) */
+.plan-body{
+  margin-top: 18px;
+  background: rgb(246, 248, 250);
+  border-top: 1px solid rgb(229, 231, 235);
+  padding: 18px 26px 26px;
+  flex: 1;
+  display:flex;
+  flex-direction: column;
+
+  margin-left: -26px;
+  margin-right: -26px;
+  margin-bottom: -26px;
 
 
-
-/* TEAM gray strip like GitHub */
-.plan-team .divider{
-  margin: 18px 0 0; /* у Team линия ближе к кнопке */
-}
-
-.plan-team .features{
-  background: #f6f8fa;        /* серый блок */
-  margin: 18px -26px -26px;   /* растянуть до краёв карточки */
-  padding: 18px 26px 26px;    /* вернуть внутренние отступы */
   border-bottom-left-radius: 16px;
   border-bottom-right-radius: 16px;
+
 }
 
-
-
-/* features list with chevron */
+/* features list */
 .features{
   text-align: left;
   list-style: none;
@@ -383,7 +359,7 @@ body{
 .features li{
   position: relative;
   padding-left: 22px;
-  color: #24292f;
+  color: rgb(36, 41, 47);
   font-size: 16px;
   line-height: 22px;
 }
@@ -393,7 +369,7 @@ body{
   position: absolute;
   left: 0;
   top: 0;
-  color: #57606a;
+  color: rgb(87, 96, 106);
   font-size: 18px;
   line-height: 18px;
 }
@@ -405,7 +381,7 @@ body{
 .muted{
   display: inline-block;
   margin-top: 3px;
-  color: var(--muted);
+  color: rgb(87, 96, 106);
   font-size: 14px;
 }
 
@@ -414,35 +390,14 @@ body{
   margin: 18px 0 12px;
   font-size: 14px;
   font-weight: 800;
-  color: var(--blue);
+  color: rgb(9, 105, 218);
   letter-spacing: 0.5px;
 }
 
-.features-plain li::before{
-  content: "›";
-}
-
-/* Enterprise recommended styling */
-
-
-/* ВНЕШНЯЯ синяя рамка (как на оригинале) */
+/* Enterprise outer frame like GitHub */
 .plan-recommended{
-    border: 3px solid var(--blueBorder)
-}
-  
-
-
-
-.recommended-bar{
-  height: 44px;
-  background: var(--blueBorder);
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 800;
-  letter-spacing: 0.6px;
-  font-size: 14px;
+  border: 3px solid rgb(31, 111, 235);
+  border-radius: 16px;
 }
 
 /* ADD-ONS section */
@@ -466,10 +421,10 @@ body{
 }
 
 .addon-card{
-  background: #fff;
-  border: 1px solid #d8dee4;
+  background: rgb(255, 255, 255);
+  border: 1px solid rgb(216, 222, 228);
   border-radius: 12px;
-  box-shadow: var(--shadow2);
+  box-shadow: 0 2px 10px rgb(140 149 159 / 18%);
   padding: 26px;
   position: relative;
   min-height: 220px;
@@ -483,24 +438,19 @@ body{
   opacity: 0.18;
 }
 
-.bubble-purple{ background: #8250df; }
-.bubble-green{ background: #2da44e; }
-.bubble-blue{ background: #0969da; }
-.bubble-pink{ background: #bf3989; }
-.bubble-orange{ background: #bc4c00; }
-.bubble-yellow{ background: #9a6700; }
+
 
 .new-pill{
   position: absolute;
   top: 22px;
   right: 22px;
-  border: 1px solid #2da44e;
-  color: #1a7f37;
+  border: 1px solid rgb(45, 164, 78);
+  color: rgb(26, 127, 55);
   border-radius: 999px;
   padding: 4px 10px;
   font-size: 12px;
   font-weight: 700;
-  background: #fff;
+  background: rgb(255, 255, 255);
 }
 
 .addon-name{
@@ -511,14 +461,14 @@ body{
 
 .addon-text{
   margin: 0 0 18px;
-  color: var(--muted);
+  color: rgb(87, 96, 106);
   font-size: 16px;
   line-height: 24px;
 }
 
 .addon-link{
   text-decoration: none;
-  color: var(--text);
+  color: rgb(36, 41, 47);
   font-weight: 700;
   font-size: 16px;
 }
