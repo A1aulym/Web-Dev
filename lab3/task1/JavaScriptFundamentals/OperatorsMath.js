@@ -5,10 +5,9 @@ alert( b++ ); // 1, postfix form returns the old value
 
 alert( a ); // 2, incremented once
 alert( b ); // 2, incremented once
-
+/*
 "" + 1 + 0 = "10" // (1)
 "" - 1 + 0 = -1 // (2)
-/*
 true + false = 1
 6 / "3" = 2
 "2" * "3" = 6
