@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ToDo List</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header class="topbar">
+      <div class="wrap">
+        <span class="topbar__title">ToDo List</span>
+      </div>
+    </header>
+
+    <main class="page">
+      <section class="panel" aria-label="ToDo app">
+        <h1 class="title">ToDo List</h1>
+
+        <form class="controls" id="todoForm">
+          <label class="sr-only" for="taskInput">New Task</label>
+          <input
+            id="taskInput"
+            class="controls__input"
+            type="text"
+            placeholder="New Task"
+            autocomplete="off"
+          />
+          <button class="controls__btn" type="submit">Add</button>
+        </form>
+
+        <ul class="list" id="todoList" aria-live="polite"></ul>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
