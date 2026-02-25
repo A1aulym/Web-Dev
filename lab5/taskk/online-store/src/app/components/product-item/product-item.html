@@ -1,0 +1,39 @@
+<div class="card">
+  <a class="main-link" [href]="product.link" target="_blank" rel="noopener">
+    <img class="main-img" [src]="currentImage" [alt]="product.name" />
+  </a>
+
+  <div class="thumbs">
+    @for (img of product.images; track $index) {
+      <img
+        class="thumb"
+        [src]="img"
+        [class.active]="img === currentImage"
+        (click)="selectImage(img); $event.preventDefault()"
+        alt="thumb"
+      />
+    }
+  </div>
+
+  <h3>{{ product.name }}</h3>
+  <p>{{ product.description }}</p>
+
+  <div class="actions">
+  <button class="btn btn-like" type="button" (click)="like()">
+    ❤ <span class="count">{{ product.likes }}</span>
+  </button>
+
+  <button class="btn btn-del" type="button" (click)="onDelete()">
+    Delete
+  </button>
+</div>
+
+<div class="share">
+  <a class="btn btn-wa" [href]="waShareLink()" target="_blank" rel="noopener">
+    Share WhatsApp
+  </a>
+
+  <a class="btn btn-tg" [href]="tgShareLink()" target="_blank" rel="noopener">
+    Share Telegram
+  </a>
+</div>
