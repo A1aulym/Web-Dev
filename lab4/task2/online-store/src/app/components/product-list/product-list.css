@@ -1,0 +1,21 @@
+.page{
+  padding: 24px 16px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.h1{
+  margin: 0 0 6px;
+  font-size: 26px;
+}
+
+.sub{
+  margin: 0 0 18px;
+  color: rgb(90,90,90);
+}
+
+.grid{
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+}

@@ -1,0 +1,34 @@
+
+
+
+<div class="card">
+  <a class="img-wrap" [href]="product().link" target="_blank" rel="noopener">
+    <img [src]="product().image" [alt]="product().name" />
+  </a>
+
+  <div class="content">
+    <h3 class="title">
+      <a [href]="product().link" target="_blank" rel="noopener">{{ product().name }}</a>
+    </h3>
+
+    <p class="desc">{{ product().description }}</p>
+
+    <div class="row">
+      <div class="price">{{ product().price }} ₸</div>
+
+      <div class="rating" [title]="'Rating: ' + product().rating">
+        <span class="stars">
+          @for (filled of getStars(); track $index) {
+            <span class="star" [class.filled]="filled">⭐</span>
+          }
+        </span>
+        <span class="badge">{{ product().rating }}</span>
+      </div>
+    </div>
+
+    <div class="actions">
+      <a class="btn" [href]="waShareLink()" target="_blank" rel="noopener">Share WhatsApp</a>
+      <a class="btn outline" [href]="tgShareLink()" target="_blank" rel="noopener">Share Telegram</a>
+    </div>
+  </div>
+</div>
