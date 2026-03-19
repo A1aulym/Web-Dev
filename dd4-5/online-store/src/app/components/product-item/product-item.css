@@ -1,0 +1,146 @@
+.card{
+  border: 1px solid rgb(230,230,230);
+  border-radius: 16px;
+  padding: 12px;
+  background: rgb(255,255,255);
+  padding-bottom: 16px;
+}
+
+/* основная картинка */
+.main-link{
+  display: block;
+}
+
+.main-img{
+  width: 100%;
+  height: 260px;
+  object-fit: contain;
+  background: rgb(248,248,248);
+  border-radius: 12px;
+}
+
+
+/* блок миниатюр прямо под основной */
+.thumbs{
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+/* миниатюры крупные */
+.thumb{
+  width: 100%;
+  height: 90px;                 /* высота ячейки */
+  object-fit: contain;          /* ВПИСЫВАЕТ целиком */
+  background: rgb(255, 255, 255); /* чтобы пустые поля были красивыми */
+  border-radius: 12px;
+  border: 2px solid rgb(220,220,220);
+  cursor: pointer;
+  background: rgb(245,245,245);
+}
+
+.thumb.active{
+  border-color: rgb(47,111,235);
+}
+
+/* остальное как было */
+.row{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.danger{
+  border: 1px solid rgb(220,40,40);
+  color: rgb(220,40,40);
+  background: transparent;
+}
+button{
+    background: rgba(254, 150, 185, 0.563);
+    border: 1px solid rgb(180, 0, 60);
+    color: rgb(227, 0, 76);
+}
+
+
+.actions, .share{
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+  flex-wrap: wrap;
+}
+
+.btn{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid rgb(220,220,220);
+  background: rgb(255,255,255);
+  color: rgb(20,20,20);
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform .08s ease, background .12s ease, border-color .12s ease;
+}
+
+.btn:hover{
+  background: rgb(245,245,245);
+}
+
+.btn:active{
+  transform: scale(0.98);
+}
+
+/* Like */
+.btn-like{
+  border-color: rgb(255, 170, 190);
+  background: rgb(255, 240, 245);
+  color: rgb(200, 30, 70);
+}
+
+.btn-like:hover{
+  background: rgb(255, 228, 238);
+}
+
+.count{
+  min-width: 18px;
+  text-align: center;
+}
+
+/* Delete */
+.btn-del{
+  border-color: rgb(240, 90, 90);
+  color: rgb(220, 40, 40);
+  background: rgb(255, 245, 245);
+}
+
+.btn-del:hover{
+  background: rgb(255, 235, 235);
+}
+
+/* WhatsApp */
+.btn-wa{
+  border-color: rgb(70, 200, 120);
+  background: rgb(235, 255, 244);
+  color: rgb(20, 120, 70);
+}
+
+.btn-wa:hover{
+  background: rgb(220, 255, 236);
+}
+
+/* Telegram */
+.btn-tg{
+  border-color: rgb(80, 170, 255);
+  background: rgb(235, 247, 255);
+  color: rgb(30, 110, 200);
+}
+
+.btn-tg:hover{
+  background: rgb(220, 240, 255);
+}
